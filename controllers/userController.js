@@ -1,6 +1,6 @@
 const { User, Shout } = require('../models');
 
-cons UserController = {
+const userController = {
     // get all users
     getAllUsers(req, res) {
         User.find({})
@@ -36,7 +36,7 @@ cons UserController = {
                 .catch((err) => {
                     console.log(err);
                     res.status(500).json(err);
-                }
+                });
             },
             // createUser
             createUser({ body }, res) {
